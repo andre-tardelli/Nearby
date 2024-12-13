@@ -1,12 +1,11 @@
-package com.andretardelli.nearby.ui.component
+package com.andretardelli.nearby.ui.component.button
 
-import com.andretardelli.nearby.R
 import androidx.annotation.DrawableRes
+import com.andretardelli.nearby.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -21,6 +20,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.andretardelli.nearby.ui.theme.GreenBase
 import com.andretardelli.nearby.ui.theme.Typography
+import kotlin.let
+import kotlin.text.uppercase
 
 @Composable
 fun NearbyButton(
@@ -36,6 +37,7 @@ fun NearbyButton(
         colors = ButtonDefaults.buttonColors(GreenBase),
         onClick = onClick
     ) {
+
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp)
